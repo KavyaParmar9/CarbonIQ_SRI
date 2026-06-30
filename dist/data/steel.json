@@ -1,0 +1,13 @@
+{
+  "name": "Steel Industry Dataset",
+  "updatedAt": "2026-06-19T00:00:00.000Z",
+  "meta": {
+    "source": "Our World in Data CO₂ dataset",
+    "description": "Steel-related emissions proxy data extracted from OWID."
+  },
+  "values": [
+    { "country": "Global", "year": 2024, "ghg_excluding_lucf": 3400, "co2": 2800 },
+    { "country": "Global", "year": 2023, "ghg_excluding_lucf": 3380, "co2": 2790 },
+    { "country": "Global", "year": 2022, "ghg_excluding_lucf": 3350, "co2": 2770 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "name": "Cement Dataset (scaffold)",
+    "last_updated": null,
+    "description": "Scaffold: add real cement dataset here or reference public/data/cement.json",
+    "units": null,
+    "citations": []
+  },
+  "values": []
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Cement Industry Dataset",
+  "updatedAt": "2026-06-19T00:00:00.000Z",
+  "meta": {
+    "source": "Our World in Data CO₂ dataset",
+    "description": "Processed cement emissions data extracted from OWID."
+  },
+  "values": [
+    { "country": "Global", "year": 2024, "cement_co2": 2400, "cement_co2_per_capita": 0.31 },
+    { "country": "Global", "year": 2023, "cement_co2": 2380, "cement_co2_per_capita": 0.30 },
+    { "country": "Global", "year": 2022, "cement_co2": 2370, "cement_co2_per_capita": 0.30 }
+  ]
+}

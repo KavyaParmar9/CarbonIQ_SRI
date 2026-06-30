@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "name": "Benchmarks",
+    "last_updated": "2026-06-25",
+    "description": "Scaffold for industry benchmark values. Populate with trusted dataset values.",
+    "units": null,
+    "citations": []
+  },
+  "benchmarks": []
+}

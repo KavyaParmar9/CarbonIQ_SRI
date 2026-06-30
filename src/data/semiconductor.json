@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "name": "Semiconductor Dataset (scaffold)",
+    "last_updated": null,
+    "description": "Scaffold: add real semiconductor dataset here or reference public/data/semiconductor.json",
+    "units": null,
+    "citations": []
+  },
+  "values": []
+}

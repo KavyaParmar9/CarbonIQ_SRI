@@ -1,0 +1,82 @@
+{
+  "industries": {
+    "cement": {
+      "name": "Cement",
+      "emissionIntensity": 0.55,
+      "processShare": 65,
+      "fuelShare": 35,
+      "thermalEnergy": 3.5,
+      "electricity": 91,
+      "benchmark": {
+        "current": 110,
+        "target": 95
+      },
+      "kpis": [
+        { "label": "Emission intensity", "value": "0.55 tCO₂/t" },
+        { "label": "Process emissions", "value": "65%" },
+        { "label": "Fuel emissions", "value": "35%" }
+      ],
+      "breakdown": [
+        { "name": "Process emissions", "value": 65, "color": "#38bdf8" },
+        { "name": "Fuel emissions", "value": 35, "color": "#64748b" }
+      ],
+      "energyBreakdown": [
+        { "name": "Thermal (GJ/t clinker)", "value": 3.5 },
+        { "name": "Electricity (kWh/t cement)", "value": 91 }
+      ],
+      "insights": [
+        "Cement production is dominated by calcination emissions, representing 65% of the total footprint.",
+        "Thermal energy and electricity intensity are key performance levers for clinker reduction strategies."
+      ]
+    },
+    "steel": {
+      "name": "Steel",
+      "routes": [
+        { "name": "BF-BOF", "value": 2.33 },
+        { "name": "DRI-EAF", "value": 1.4 },
+        { "name": "Scrap EAF", "value": 0.7 }
+      ],
+      "benchmark": {
+        "current": 150,
+        "target": 128
+      },
+      "kpis": [
+        { "label": "BF-BOF intensity", "value": "2.33 tCO₂/t" },
+        { "label": "DRI-EAF intensity", "value": "1.40 tCO₂/t" },
+        { "label": "Scrap EAF intensity", "value": "0.70 tCO₂/t" }
+      ],
+      "insights": [
+        "Steel route selection changes carbon footprint by more than 70% between BF-BOF and Scrap EAF.",
+        "DRI-EAF provides a strong mid-point option for lower-emission primary steel production."
+      ]
+    },
+    "semiconductor": {
+      "name": "Semiconductor",
+      "scope1": 20,
+      "scope2": 80,
+      "factor": 0.82,
+      "benchmark": {
+        "current": 72,
+        "target": 60
+      },
+      "kpis": [
+        { "label": "Scope 1 share", "value": "20%" },
+        { "label": "Scope 2 share", "value": "80%" },
+        { "label": "Electricity factor", "value": "0.82 kgCO₂/kWh" }
+      ],
+      "breakdown": [
+        { "name": "Scope 1", "value": 20, "color": "#38bdf8" },
+        { "name": "Scope 2", "value": 80, "color": "#64748b" }
+      ],
+      "insights": [
+        "Electricity use drives 80% of the semiconductor carbon footprint in this model.",
+        "Scope 1 emissions remain important where on-site gas usage and fuel combustion are present."
+      ]
+    }
+  },
+  "benchmarkComparison": [
+    { "name": "Cement", "current": 110, "benchmark": 95 },
+    { "name": "Steel", "current": 150, "benchmark": 128 },
+    { "name": "Semiconductor", "current": 72, "benchmark": 60 }
+  ]
+}

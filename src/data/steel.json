@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "name": "Steel Dataset (scaffold)",
+    "last_updated": null,
+    "description": "Scaffold: add real steel dataset here or reference public/data/steel.json",
+    "units": null,
+    "citations": []
+  },
+  "values": []
+}

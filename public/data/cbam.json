@@ -1,0 +1,32 @@
+{
+  "name": "CBAM Research Dataset",
+  "updatedAt": "2026-06-19T00:00:00.000Z",
+  "meta": {
+    "source": "Internal research aggregation",
+    "description": "Summaries and structured findings for CBAM studies."
+  },
+  "values": [
+    {
+      "title": "CBAM Great Britain Electricity Study",
+      "methodology": "Benchmark analysis of emissions intensity and tariff impacts for electricity-intensive exporters.",
+      "findings": [
+        "Tariff exposure increases with grid carbon intensity.",
+        "Power-intensive sectors require low-carbon contracts to mitigate CBAM costs."
+      ],
+      "limitations": [
+        "Focuses only on electricity emissions, not full supply chain."
+      ]
+    },
+    {
+      "title": "CBAM India Steel Study",
+      "methodology": "Sector-level analysis of steel export emissions and border adjustment risk.",
+      "findings": [
+        "BF-BOF remains the highest exposure route.",
+        "Domestic scrap recycling and energy efficiency reduce CBAM liabilities."
+      ],
+      "limitations": [
+        "Data is estimated from national aggregates and not plant-level surveys."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "name": "Research Data Sources",
+    "last_updated": "2026-06-25",
+    "description": "Scaffold for data sources used by CarbonIQ. Replace with real source metadata.",
+    "units": null,
+    "citations": []
+  },
+  "sources": []
+}

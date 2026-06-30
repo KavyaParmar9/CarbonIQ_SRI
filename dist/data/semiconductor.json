@@ -1,0 +1,13 @@
+{
+  "name": "Semiconductor Industry Dataset",
+  "updatedAt": "2026-06-19T00:00:00.000Z",
+  "meta": {
+    "source": "Our World in Data CO₂ dataset",
+    "description": "Semiconductor proxy dataset from electrical energy and CO₂ statistics."
+  },
+  "values": [
+    { "country": "Global", "year": 2024, "energy_per_capita": 3300, "co2": 1200 },
+    { "country": "Global", "year": 2023, "energy_per_capita": 3270, "co2": 1188 },
+    { "country": "Global", "year": 2022, "energy_per_capita": 3250, "co2": 1175 }
+  ]
+}
