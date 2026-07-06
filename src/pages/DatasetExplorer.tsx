@@ -110,25 +110,25 @@ export default function DatasetExplorer() {
     <section className="space-y-8">
       <SectionHeading title="Dataset Explorer" description="Search, preview, and download datasets bundled with the project." />
 
-      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-2xl border border-slate-200/80 bg-white/95 p-5 shadow-sm">
-          <div className="flex items-center gap-3">
+      <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
+        <div className="rounded-2xl border border-slate-200/80 bg-white/95 p-4 shadow-sm sm:p-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search datasets (name)..."
-              className="flex-1 rounded-lg border px-3 py-2 outline-none"
+              className="flex-1 rounded-lg border border-slate-300 px-3 py-2 outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-950"
             />
           </div>
 
           <div className="mt-4 space-y-3">
             {filtered.map((f) => (
-              <div key={f.name} className="flex items-center justify-between gap-3 rounded-lg border p-3">
+              <div key={f.name} className="flex flex-col gap-3 rounded-lg border border-slate-200 p-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <div className="font-medium">{f.name}</div>
                   <div className="text-sm text-slate-600">{f.type.toUpperCase()}</div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <button
                     className="rounded-md border px-3 py-1 text-sm"
                     onClick={() => loadPreview(f)}
@@ -152,7 +152,7 @@ export default function DatasetExplorer() {
             <div className="text-sm text-slate-500">{selected?.name ?? 'No file selected'}</div>
           </div>
 
-          <div className="h-[520px] overflow-auto rounded-md bg-slate-50 p-3 text-sm">
+          <div className="min-h-[320px] overflow-auto rounded-md bg-slate-50 p-3 text-sm">
             {loading && <div>Loading preview…</div>}
 
             {!loading && selected?.type === 'json' && jsonSummary && (
@@ -170,8 +170,8 @@ export default function DatasetExplorer() {
 
             {!loading && selected?.type === 'csv' && (
               <div>
-                <div className="mb-2 flex items-center gap-2">
-                  <input value={csvFilter} onChange={(e) => { setCsvFilter(e.target.value); setCsvPage(1); }} placeholder="Filter rows (any column)..." className="rounded-md border px-2 py-1 flex-1" />
+                <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center">
+                  <input value={csvFilter} onChange={(e) => { setCsvFilter(e.target.value); setCsvPage(1); }} placeholder="Filter rows (any column)..." className="flex-1 rounded-md border border-slate-300 px-2 py-1 dark:border-slate-700 dark:bg-slate-950" />
                 </div>
 
                 <div className="mb-2 text-sm text-slate-700">Columns:</div>
@@ -193,7 +193,7 @@ export default function DatasetExplorer() {
                 )}
 
                 <div className="mb-2 text-sm text-slate-700">Rows (page {csvPage} of {pageCount})</div>
-                <div className="overflow-auto rounded border bg-white">
+                <div className="overflow-x-auto rounded border border-slate-200 bg-white">
                   <table className="min-w-full text-sm">
                     <thead className="bg-slate-100">
                       <tr>
@@ -214,7 +214,7 @@ export default function DatasetExplorer() {
                   </table>
                 </div>
 
-                <div className="mt-2 flex items-center gap-2">
+                <div className="mt-2 flex flex-wrap items-center gap-2">
                   <button disabled={csvPage <= 1} onClick={() => setCsvPage((p) => Math.max(1, p - 1))} className="rounded-md border px-2 py-1">Prev</button>
                   <button disabled={csvPage >= pageCount} onClick={() => setCsvPage((p) => Math.min(pageCount, p + 1))} className="rounded-md border px-2 py-1">Next</button>
                   <div className="text-sm text-slate-600 ml-auto">{filteredCsvRows.length} rows</div>

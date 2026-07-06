@@ -11,10 +11,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-slate-950 text-slate-100 antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body.light {
@@ -30,6 +33,15 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.break-words {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 ::selection {

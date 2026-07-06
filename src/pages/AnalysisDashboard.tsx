@@ -76,18 +76,18 @@ export default function AnalysisDashboard() {
   }, [industry]);
 
   return (
-    <section className="space-y-10">
+    <section className="space-y-8 sm:space-y-10">
       <SectionHeading
         title="Analysis Dashboard"
         description="Track emissions, compare industry benchmarks, and uncover operational insights for carbon-intensive sectors."
       />
 
-      <div className="flex flex-wrap items-center gap-3 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-xl shadow-slate-950/10 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30">
+      <div className="flex flex-wrap items-center gap-2 rounded-3xl border border-slate-200/80 bg-white/95 p-3 shadow-xl shadow-slate-950/10 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30 sm:gap-3 sm:p-4">
         {industries.map((item) => (
           <button
             key={item.id}
             onClick={() => setActiveIndustry(item.id as 'cement' | 'steel' | 'semiconductor')}
-            className={`rounded-full px-5 py-3 text-sm font-medium transition ${
+            className={`rounded-full px-4 py-2.5 text-sm font-medium transition sm:px-5 sm:py-3 ${
               activeIndustry === item.id ? 'bg-brand-500 text-white shadow-glow' : 'bg-slate-100 text-slate-800 hover:bg-slate-200 dark:bg-slate-950 dark:text-slate-300 dark:hover:bg-slate-900'
             }`}
           >
@@ -97,7 +97,7 @@ export default function AnalysisDashboard() {
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.4fr_0.9fr]">
-        <div className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/30 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30">
+        <div className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-xl shadow-slate-950/30 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30 sm:p-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-sm text-slate-500 dark:text-slate-400">Industry pulse</p>
@@ -106,7 +106,7 @@ export default function AnalysisDashboard() {
             <span className="rounded-full bg-slate-100/80 px-4 py-2 text-sm text-slate-700 dark:bg-slate-950/80 dark:text-slate-300">Benchmark</span>
           </div>
 
-          <div className="h-[320px] w-full">
+          <div className="h-[280px] w-full sm:h-[320px] overflow-hidden">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={monthlyTrend} margin={{ top: 10, right: 24, left: 0, bottom: 0 }}>
                 <defs>
@@ -129,6 +129,8 @@ export default function AnalysisDashboard() {
                 />
               </AreaChart>
             </ResponsiveContainer>
+          </div>
+          <div className="mt-3">
             <DataProvenance
               source={prov?.source}
               dataset={prov?.dataset}
@@ -149,9 +151,9 @@ export default function AnalysisDashboard() {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/20 dark:border-slate-800/80 dark:bg-slate-900/90">
+          <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-xl shadow-slate-950/20 dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Benchmark comparison</p>
-            <div className="h-[260px] mt-4">
+            <div className="mt-4 h-[240px] sm:h-[260px] overflow-hidden">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={industryData.benchmarkComparison} margin={{ left: -24, right: 8, top: 6, bottom: 6 }}>
                   <CartesianGrid stroke="#334155" strokeDasharray="3 3" vertical={false} />
@@ -163,6 +165,8 @@ export default function AnalysisDashboard() {
                   <Bar dataKey="benchmark" fill="#64748b" radius={[8, 8, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
+            </div>
+            <div className="mt-3">
               <DataProvenance
                 source={prov?.source}
                 dataset={prov?.dataset}
@@ -176,9 +180,9 @@ export default function AnalysisDashboard() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[0.9fr_0.9fr]">
-        <div className="rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 shadow-xl shadow-slate-950/20">
+        <div className="rounded-3xl border border-slate-800/80 bg-slate-950/80 p-4 shadow-xl shadow-slate-950/20 sm:p-6">
           <p className="text-sm uppercase tracking-[0.18em] text-brand-300">Emission breakdown</p>
-          <div className="mt-6 h-72 w-full">
+          <div className="mt-6 h-[260px] w-full sm:h-72 overflow-hidden">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
@@ -196,6 +200,8 @@ export default function AnalysisDashboard() {
                 <Tooltip contentStyle={{ backgroundColor: '#0f172a', border: '1px solid #334155' }} />
               </PieChart>
             </ResponsiveContainer>
+          </div>
+          <div className="mt-3">
             <DataProvenance
               source={prov?.source}
               dataset={prov?.dataset}

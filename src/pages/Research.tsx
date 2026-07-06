@@ -45,14 +45,14 @@ export default function Research() {
   const [openPaper, setOpenPaper] = useState<string | null>(cbamResearch[0]?.title ?? null);
 
   return (
-    <section className="space-y-10 scroll-smooth">
+    <section className="space-y-8 scroll-smooth sm:space-y-10">
       <SectionHeading
         title="Research"
         description="A single research page for methodologies, data provenance, models, CBAM, papers, and references."
       />
 
       <div className="grid gap-8 xl:grid-cols-[0.28fr_0.72fr]">
-        <aside className="hidden xl:block sticky top-24 space-y-6 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/10 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/20">
+        <aside className="sticky top-24 hidden space-y-6 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/10 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/20 xl:block">
           <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Contents</p>
           <nav className="space-y-2 text-sm">
             {sectionLinks.map((link) => (
@@ -86,7 +86,7 @@ export default function Research() {
               ))}
             </div>
           </div>
-          <section id="project-overview" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="project-overview" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Project Overview</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">A research-focused carbon analytics platform</h2>
             <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
@@ -108,7 +108,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="methodology" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="methodology" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Methodology</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">A consistent, transparent modeling approach</h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -128,7 +128,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="data-sources" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="data-sources" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Data Sources</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Source cards for integrated datasets</h2>
             <div className="grid gap-4 md:grid-cols-3">
@@ -146,7 +146,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="dataset-summary" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="dataset-summary" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Dataset Summary</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Key files powering the analysis</h2>
             <div className="grid gap-4 lg:grid-cols-2">
@@ -173,7 +173,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="mathematical-models" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="mathematical-models" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Mathematical Models</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Core emissions equations</h2>
             <div className="space-y-4">
@@ -196,7 +196,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="cbam-overview" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="cbam-overview" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">CBAM Overview</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">How CBAM is reflected in the analysis</h2>
             <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
@@ -213,7 +213,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="papers" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="papers" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Research Papers</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Paper summaries and learnings</h2>
             <div className="space-y-4">
@@ -240,7 +240,7 @@ export default function Research() {
             </div>
           </section>
 
-          <section id="references" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90">
+          <section id="references" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">References</p>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Core sources and citations</h2>
             <div className="overflow-hidden rounded-3xl border border-slate-200/80 dark:border-slate-800/80">

@@ -7,6 +7,7 @@ import Research from './pages/Research';
 import Home from './pages/Home';
 import DataSources from './pages/DataSources';
 import DatasetExplorer from './pages/DatasetExplorer';
+import ReportGenerator from './pages/ReportGenerator';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -18,6 +19,7 @@ function App() {
     { id: 'home', label: 'Home', component: <Home setActivePage={setActivePage} /> },
     { id: 'dashboard', label: 'Analysis Dashboard', component: <AnalysisDashboard /> },
     { id: 'calculator', label: 'Carbon Calculator', component: <CarbonCalculator /> },
+    { id: 'report-generator', label: 'Report Generator', component: <ReportGenerator setActivePage={setActivePage} /> },
     { id: 'explorer', label: 'Dataset Explorer', component: <DatasetExplorer /> },
     { id: 'research', label: 'Research', component: <Research /> },
     { id: 'sources', label: 'Data Sources', component: <DataSources /> },
@@ -39,13 +41,13 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${
+    <div className={`min-h-screen overflow-x-hidden transition-colors duration-500 ${
       theme === 'dark'
         ? 'bg-slate-950 text-slate-100'
         : 'bg-slate-50 text-slate-900'
     }`}>
       <Header activePage={activePage} setActivePage={setActivePage} toggleTheme={toggleTheme} theme={theme} />
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={activePage}

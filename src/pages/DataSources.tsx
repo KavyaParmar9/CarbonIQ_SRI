@@ -60,14 +60,14 @@ export default function DataSources() {
         description="Overview of bundled datasets and their provenance. Files are loaded from the project's `/public/data` folder when available."
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {loading && <div className="p-6">Loading datasets…</div>}
 
         {!loading &&
           potentialFiles.map((file) => {
             const meta = results[file];
             return (
-              <div key={file} className="rounded-2xl border border-slate-200/80 bg-white/95 p-5 shadow-sm">
+              <div key={file} className="rounded-2xl border border-slate-200/80 bg-white/95 p-5 shadow-sm break-words">
                 <h4 className="text-lg font-semibold text-slate-900">{file.replace('.json', '')}</h4>
                 {meta === null ? (
                   <p className="mt-2 text-sm text-slate-600">Dataset not currently available.</p>

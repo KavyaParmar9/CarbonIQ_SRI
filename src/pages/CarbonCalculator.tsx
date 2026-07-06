@@ -81,14 +81,14 @@ export default function CarbonCalculator() {
   );
 
   return (
-    <section className="space-y-10">
+    <section className="space-y-8 sm:space-y-10">
       <SectionHeading
         title="Carbon Calculator"
         description="Estimate emissions for cement, steel, and semiconductor production using structured models and modern visual outputs."
       />
 
       <div className="grid gap-6 xl:grid-cols-[0.95fr_0.55fr]">
-        <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/30 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30">
+        <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-xl shadow-slate-950/30 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30 sm:p-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Calculator selector</p>
@@ -97,12 +97,12 @@ export default function CarbonCalculator() {
             <div className="rounded-full bg-slate-100/80 px-4 py-2 text-sm text-slate-700 dark:bg-slate-950/80 dark:text-slate-300">Active model</div>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2 sm:gap-3">
             {calculators.map((calculator) => (
               <button
                 key={calculator.id}
                 onClick={() => setActiveCalculator(calculator.id as 'cement' | 'steel' | 'semiconductor')}
-                className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+                className={`rounded-full border px-3 py-2 text-sm font-medium transition sm:px-4 ${
                   activeCalculator === calculator.id
                     ? 'border-brand-500 bg-brand-500/10 text-white'
                     : 'border-slate-300 bg-white/90 text-slate-800 hover:border-slate-500 dark:border-slate-700 dark:bg-slate-950/90 dark:text-slate-300'
@@ -168,7 +168,7 @@ export default function CarbonCalculator() {
           </div>
         </div>
 
-        <aside className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/30 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30">
+        <aside className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-xl shadow-slate-950/30 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30 sm:p-6">
           <div>
             <p className="text-sm uppercase tracking-[0.18em] text-brand-600 dark:text-brand-300">Calculator results</p>
             <p className="mt-3 text-3xl font-semibold text-slate-900 dark:text-white">{results.total?.toFixed(2) ?? '0.00'}</p>

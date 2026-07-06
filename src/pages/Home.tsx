@@ -19,22 +19,22 @@ const features = [
 
 export default function Home({ setActivePage }: HomeProps) {
   return (
-    <section className="space-y-12">
+    <section className="space-y-8 sm:space-y-12">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]"
+        className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8"
       >
         <div className="space-y-6">
           <span className="inline-flex rounded-full bg-brand-500/10 px-4 py-1 text-sm font-semibold text-brand-600 dark:text-brand-200 dark:bg-brand-500/15">
             Sustainability analytics for industrial leaders
           </span>
           <div className="space-y-4">
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+            <h1 className="text-3xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
               CarbonIQ: the enterprise sustainability command center.
             </h1>
-            <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400">
+            <p className="max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg">
               Unlock decarbonization decisions for cement, steel and semiconductor operations with high-fidelity insights, scenario analytics, and CBAM research support.
             </p>
           </div>
@@ -57,10 +57,10 @@ export default function Home({ setActivePage }: HomeProps) {
         </div>
         
         <div className="mt-6 lg:mt-0">
-          <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl">
+          <div className="rounded-3xl border border-slate-200/80 bg-white/95 p-5 shadow-xl sm:p-6">
             <h3 className="text-lg font-semibold text-slate-900">Project Overview</h3>
             <p className="mt-2 text-sm text-slate-600">CarbonIQ is an industrial carbon analytics platform focused on cement, steel and semiconductor sectors. It supports dataset exploration, benchmarking, and emissions calculations for research and operational insights.</p>
-            <div className="mt-4 grid grid-cols-2 gap-2">
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
               <button onClick={() => setActivePage('explorer')} className="rounded-md border px-3 py-2 text-sm">Dataset Explorer</button>
               <button onClick={() => setActivePage('sources')} className="rounded-md border px-3 py-2 text-sm">Data Sources</button>
               <button onClick={() => setActivePage('calculator')} className="rounded-md border px-3 py-2 text-sm">Calculator</button>
@@ -108,7 +108,7 @@ export default function Home({ setActivePage }: HomeProps) {
         description="CarbonIQ combines emissions analytics, cross-sector benchmarking, and CBAM research into a single enterprise UI."
       />
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {stats.map((item) => (
           <div key={item.label} className="rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-950/10 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/30">
             <p className="text-sm uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">{item.label}</p>
@@ -117,10 +117,10 @@ export default function Home({ setActivePage }: HomeProps) {
         ))}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 xl:grid-cols-2">
         <section className="rounded-3xl border border-slate-200/80 bg-white/95 p-8 shadow-xl shadow-slate-950/10 dark:border-slate-800/80 dark:bg-slate-900/90 dark:shadow-slate-950/40">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Platform capabilities</h2>
-          <div className="mt-6 space-y-4">
+          <div className="mt-6 space-y-3 sm:space-y-4">
             {features.map((item) => (
               <div key={item.title} className="rounded-3xl bg-slate-50/90 p-5 dark:bg-slate-950/75">
                 <p className="text-lg font-semibold text-slate-900 dark:text-white">{item.title}</p>
@@ -138,7 +138,7 @@ export default function Home({ setActivePage }: HomeProps) {
             </div>
             <span className="rounded-full bg-slate-200/70 px-3 py-1 text-xs text-slate-700 dark:bg-slate-800/70 dark:text-slate-300">Sector pulse</span>
           </div>
-          <div className="mt-6 space-y-5">
+          <div className="mt-6 space-y-4">
             <div className="rounded-3xl bg-slate-50/90 p-5 dark:bg-slate-950/70">
               <p className="text-sm text-slate-600 dark:text-slate-400">Cement decarbonization</p>
               <p className="mt-2 text-base leading-7 text-slate-700 dark:text-slate-200">AI-enabled clinker optimization reduces CO₂ footprint while preserving output quality and compliance readiness.</p>
