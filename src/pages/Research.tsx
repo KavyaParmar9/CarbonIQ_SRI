@@ -167,10 +167,6 @@ export default function Research() {
                 <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Aggregated industry defaults used by the calculator and dashboard metrics.</p>
               </div>
             </div>
-            <div className="rounded-3xl border border-slate-200/80 bg-white/90 p-5 text-sm text-slate-700 dark:border-slate-800/80 dark:bg-slate-950/80 dark:text-slate-300">
-              <p className="font-semibold">Explore datasets</p>
-              <p className="mt-2">Use the Dataset Explorer page for row previews, filtering, and downloads of available JSON and CSV files.</p>
-            </div>
           </section>
 
           <section id="mathematical-models" className="scroll-mt-24 space-y-4 rounded-3xl border border-slate-200/80 bg-white/95 p-4 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/90 sm:p-6">

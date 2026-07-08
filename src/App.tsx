@@ -6,7 +6,6 @@ import CarbonCalculator from './pages/CarbonCalculator';
 import Research from './pages/Research';
 import Home from './pages/Home';
 import DataSources from './pages/DataSources';
-import DatasetExplorer from './pages/DatasetExplorer';
 import ReportGenerator from './pages/ReportGenerator';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -20,7 +19,6 @@ function App() {
     { id: 'dashboard', label: 'Analysis Dashboard', component: <AnalysisDashboard /> },
     { id: 'calculator', label: 'Carbon Calculator', component: <CarbonCalculator /> },
     { id: 'report-generator', label: 'Report Generator', component: <ReportGenerator setActivePage={setActivePage} /> },
-    { id: 'explorer', label: 'Dataset Explorer', component: <DatasetExplorer /> },
     { id: 'research', label: 'Research', component: <Research /> },
     { id: 'sources', label: 'Data Sources', component: <DataSources /> },
     { id: 'about', label: 'About', component: <About /> },

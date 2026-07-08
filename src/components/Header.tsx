@@ -29,7 +29,7 @@ export default function Header({ activePage, setActivePage, toggleTheme, theme }
           >
             CarbonIQ
           </button>
-          <p className="text-sm text-slate-600 dark:text-slate-400">Enterprise emissions analytics</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">Industrial carbon research</p>
         </div>
 
         <nav className="hidden items-center gap-2 md:flex">
